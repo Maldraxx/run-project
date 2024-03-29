@@ -8,7 +8,7 @@ from . import views
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="[코딩테스트 문제 생성기(가제)] API",
+      title="[코딩테스트 문제 생성기(가제) : !!GCP TEST] API",
       default_version='0.1',
       description="API for dev",
    ),

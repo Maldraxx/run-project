@@ -1,10 +1,7 @@
 from django.contrib.auth.hashers import check_password
-from drf_yasg.utils import swagger_auto_schema
-from rest_framework import viewsets
-from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework_jwt.settings import api_settings
-from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.tokens import AccessToken, RefreshToken
 
 from .models import User
 

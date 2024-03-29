@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/projectrun-418503/run-project', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/projectrun-418503/run-project']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'run-project', '--image', 'gcr.io/projectrun-418503/run-project', '--region', 'asia-east1', '--platform', 'managed', '--allow-unauthenticated']
