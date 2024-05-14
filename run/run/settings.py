@@ -30,16 +30,6 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-CORS_ORIGIN_WHITELIST = (
-    "https://run-project-audcslcbja-de.a.run.app"
-)
-
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-]
-
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
+
     'rest_framework',
     'drf_yasg',
     'accounts',
@@ -55,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -65,6 +58,16 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'run.urls'
+
+CORS_ORIGIN_WHITELIST = [
+    "https://run-project-audcslcbja-de.a.run.app",
+]
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+]
+
 
 TEMPLATES = [
     {
