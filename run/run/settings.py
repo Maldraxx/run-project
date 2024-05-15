@@ -30,13 +30,6 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-]
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -136,3 +129,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+]
