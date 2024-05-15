@@ -12,5 +12,5 @@ COPY . .
 
 RUN pip install gunicorn
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "run.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "run.run.wsgi:application"]
 
