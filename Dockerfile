@@ -7,11 +7,8 @@ ENV PYTHONUNBUFFERED=1
 COPY req.txt req.txt
 RUN pip install -r req.txt
 
-ENV PORT 8080
-ENV HOST 0.0.0.0
-
 COPY . .
 
-CMD [ "python", "./run/manage.py", "runserver", "0.0.0.0:$PORT" ]
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:${PORT:-8080}" ]
 
 # docker run -p 8080:8080 <image_id>
