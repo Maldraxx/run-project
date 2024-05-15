@@ -1,5 +1,4 @@
 FROM python:3.10-slim-buster
-
 WORKDIR /app
 
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -10,7 +9,6 @@ RUN pip install -r req.txt
 
 COPY . .
 
-RUN pip install gunicorn
+CMD [ "python", "./run/manage.py", "runserver", "0.0.0.0:8080" ]
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "run.run.wsgi:application"]
-
+# docker run -p 8080:8080 <image_id>
