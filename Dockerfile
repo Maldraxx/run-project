@@ -9,6 +9,6 @@ RUN pip install -r req.txt
 
 COPY . .
 
-CMD [ "python", "./run/manage.py", "runserver", "0.0.0.0:8080" ]
+CMD [ "python", "./run/manage.py", "runserver", "0.0.0.0:$PORT" ]
 
 # docker run -p 8080:8080 <image_id>
